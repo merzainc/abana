@@ -1,15 +1,15 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 
 let images = [
-  "/images/1.jpeg",
-  "/images/2.jpeg",
-  "/images/3.jpeg",
-  "/images/4.jpeg",
-  "/images/5.jpeg",
-  "/images/6.jpeg",
+  "https://udcorp.co.zw/wp-content/uploads/2019/10/town-planning.jpg",
+  "https://udcorp.co.zw/wp-content/uploads/2019/11/pictech.png",
+  "https://udcorp.co.zw/wp-content/uploads/2019/09/thisone.jpg",
+  "https://udcorp.co.zw/wp-content/uploads/2019/10/Manresa-New-block.png",
+  "https://www.emendo.co.za/cssslider/images1/vista-park-map.jpg",
 ];
 
 const Hero = () => {
@@ -143,6 +143,7 @@ const Hero = () => {
             <img
               src={images[index]}
               className="aspect-[3/2] object-cover rounded-lg"
+              alt={`Slider Image ${index}`}
             />
 
             {index > 0 && (

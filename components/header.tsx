@@ -19,7 +19,7 @@ const Header = () => {
         <nav>
           <ul className="flex items-center gap-x-4 text-sm">
             <li>
-              <a className="hover:text-primary duration-300" href="/contact">
+              <a className="hover:text-primary duration-300" href="/about">
                 About
               </a>
             </li>

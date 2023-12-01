@@ -78,5 +78,33 @@ const stationary = [
   },
 ];
 
+const protective = [
+  {
+    id: 1,
+    name: "Construction personal protecting equipment",
+    imageSrc: "/products/safety/construction-personal-protecting-equipment-23004099.webp",
+    imageAlt: "Construction personal protecting equipment",
+  },
+  {
+    id: 2,
+    name: "Safety equipment protective for hospital",
+    imageSrc:
+      "/products/safety/Safety-Equipment-Protective-for-Hospital.jpg",
+    imageAlt: "Safety equipment protective for hospital",
+  },
+  {
+    id: 3,
+    name: "Industrial protective wear",
+    imageSrc: "/products/safety/image-1.jpg",
+    imageAlt: "Industrial protective wear shoes",
+  },
+  {
+    id: 4,
+    name: "Helmets and Safety Clothing",
+    imageSrc: "/products/safety/istockphoto-165829163-612x612.jpg",
+    imageAlt: "Books",
+  },
+];
+
 export default products;
-export { medics, stationary };
+export { medics, stationary,protective };

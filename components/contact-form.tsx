@@ -1,19 +1,19 @@
-"use client";
-import React, { FormEvent, useRef, useState } from "react";
+'use client';
+import React, { FormEvent, useRef, useState } from 'react';
 import {
   HiOutlineBuildingOffice2,
   HiOutlinePhone,
   HiOutlineEnvelope,
   HiOutlineDevicePhoneMobile,
   HiOutlinePhoneArrowUpRight,
-} from "react-icons/hi2";
-import { FaWhatsapp } from "react-icons/fa6";
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/text-area";
-import Link from "next/link";
-import { useToast } from "@/hooks/use-toast";
-import { Icons } from "./icons";
+} from 'react-icons/hi2';
+import { FaWhatsapp } from 'react-icons/fa6';
+import { Button } from './ui/button';
+import { Input } from './ui/input';
+import { Textarea } from './ui/text-area';
+import Link from 'next/link';
+import { useToast } from '@/hooks/use-toast';
+import { Icons } from './icons';
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -27,9 +27,9 @@ const ContactForm = () => {
     setLoading(true);
     event.preventDefault();
     if (emailRef !== null && messageRef !== null) {
-      const result = await fetch("/api/send-mail", {
-        headers: { "Content-Type": "application/json" },
-        method: "POST",
+      const result = await fetch('/api/send-mail', {
+        headers: { 'Content-Type': 'application/json' },
+        method: 'POST',
         body: JSON.stringify({
           email: emailRef.current?.value,
           message: messageRef.current?.value,
@@ -37,13 +37,13 @@ const ContactForm = () => {
       });
       if (result.status === 200) {
         toast({
-          description: "Message was successfully sent!",
+          description: 'Message was successfully sent',
         });
         setLoading(false);
       } else {
         toast({
-          description: "Oopps, message failed to sent!",
-          variant: "destructive",
+          description: 'Oopps, message failed to sent!',
+          variant: 'destructive',
         });
         setLoading(false);
       }
